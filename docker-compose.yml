@@ -1,0 +1,10 @@
+version: '3'
+services:
+  ansible_control:
+    build: ./ansible_control
+    volumes:
+      - ./ansible_control:/ansible
+    command: tail -f /dev/null
+  ansible_managed:
+    build: ./ansible_managed
+    command: tail -f /dev/null
